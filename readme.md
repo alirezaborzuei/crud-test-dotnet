@@ -1,47 +1,51 @@
-# CRUD Code Test 
+# CRUD Test — .NET Sample Application
 
-Please read each note very carefully!
-Feel free to add/change the project structure to a clean architecture to your view.
-and if you are not able to work on the FrontEnd project, you can add a Swagger UI
-in a new Front project.
+A practical **.NET CRUD sample** demonstrating backend engineering practices, layered architecture, validation, automated testing, and maintainable application structure.
 
-Create a simple CRUD application with .NET that implements the below model:
-```
-Customer {
-	FirstName
-	LastName
-	DateOfBirth
-	PhoneNumber
-	Email
-	BankAccountNumber
-}
-```
-## Practices and patterns:
+This repository is kept public as a **personal portfolio / technical sample**.
 
-- [TDD](https://docs.microsoft.com/en-us/visualstudio/test/quick-start-test-driven-development-with-test-explorer?view=vs-2022)
-- [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development)
-- [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)
-- [Clean architecture](https://github.com/jasontaylordev/CleanArchitecture)
-- [CQRS](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Command_query_responsibility_separation) pattern ([Event sourcing](https://en.wikipedia.org/wiki/Domain-driven_design#Event_sourcing)).
-- Clean git commits that show your work progress, each commit must provide your decision making process for each change or selection.
+## What it demonstrates
 
-### Validations
+- CRUD operations
+- Clean architecture principles
+- Domain-driven design concepts
+- CQRS-oriented application structure
+- TDD / BDD testing practices
+- Acceptance tests
+- Backend validation
+- Database constraints and uniqueness rules
+- Separation of presentation and application concerns
 
-- During Create; validate the phone number to be a valid *mobile* number only (Please use [Google LibPhoneNumber](https://github.com/google/libphonenumber) to validate number at the backend).
+## Project Structure
 
-- A Valid email and a valid bank account number must be checked before submitting the form.
+- `Mc2.CrudTest.Presentation` — presentation/API layer
+- `Mc2.CrudTest.AcceptanceTests` — acceptance-level tests
+- `Mc2.CrudTest.sln` — Visual Studio solution
 
-- Customers must be unique in the database: By `Firstname`, `Lastname`, and `DateOfBirth`.
+## Domain
 
-- Email must be unique in the database.
+The sample uses a `Customer` domain containing fields such as:
 
-### Storage
+- First name / Last name
+- Date of birth
+- Phone number
+- Email
+- Bank account number
 
-- Store the phone number in a database with minimized space storage (choose `varchar`/`string`, or `ulong` whichever store less space).
+The project focuses on **engineering practices and system design**, not on real customer information. No production customer data is intended to be stored in this repository.
 
-### Delivery
-- Please clone this repository in a new GitHub repository in private mode and share with ID: `mason-chase` in private mode on github.com, make sure you do not erase my commits and then create a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) (code review).
+## Testing
 
-## Nice to do:
-- Blazor Web.
-- Docker-compose project that loads database service automatically which `docker-compose up`
+The solution includes automated test coverage and an acceptance-test project to demonstrate testing at different levels.
+
+## Getting Started
+
+Open `Mc2.CrudTest.sln` in Visual Studio and restore/build the solution. Run the available test projects through the Visual Studio Test Explorer or your preferred .NET test runner.
+
+## Portfolio Note
+
+This is a personal technical sample demonstrating how I approach a small business application from domain modeling through presentation and testing.
+
+## Author
+
+Alireza Borzouei
